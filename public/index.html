@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易用戶管理</title>
+    <link rel="stylesheet" href="style.css"> <!-- 連結 CSS 檔案 -->
+</head>
+<body>
+
+    <h1>簡易用戶管理系統</h1>
+
+    <!-- 用戶輸入表單 -->
+    <form id="user-form">
+        <h2>新增用戶</h2>
+        <div>
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit">新增</button>
+        <p id="error-message" class="error"></p> <!-- 用於顯示錯誤訊息 -->
+    </form>
+
+    <hr>
+
+    <!-- 用戶列表顯示區 -->
+    <h2>用戶列表</h2>
+    <ul id="user-list">
+        <!-- 用戶資料會由 JavaScript 動態載入這裡 -->
+        <li>載入中...</li>
+    </ul>
+
+    <!-- 連結 JavaScript 檔案 (放在 body 結尾前) -->
+    <script src="script.js"></script>
+</body>
+</html>

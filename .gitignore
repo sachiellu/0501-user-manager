@@ -1,0 +1,17 @@
+# 忽略 Node.js 依賴套件目錄
+node_modules/
+
+# 忽略本地開發時產生的資料庫檔案和目錄
+# (我們希望 Render 在它的持久磁碟上自己建立)
+users.db
+data/
+*.db
+*.db-journal
+
+# 忽略作業系統或編輯器產生的檔案 (可選，但建議)
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.idea/
+.vscode/
