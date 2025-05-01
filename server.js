@@ -3,7 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
-const dataDir = process.env.RENDER_DISK_MOUNT_PATH || path.join(__dirname, 'data'); 
+const dataDir = path.join(__dirname, 'data');
 const dbFilename = 'users.db';
 const dbPath = path.join(dataDir, dbFilename);
 
