@@ -18,6 +18,7 @@ if (!fs.existsSync(dataDir)){
     }
 } else {
     console.log(`資料目錄 ${dataDir} 已存在。`);
+}
 
 console.log(`嘗試連接資料庫於: ${dbPath}`);
 const db = new sqlite3.Database(dbPath, (err) => {
