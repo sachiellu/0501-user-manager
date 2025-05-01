@@ -1,15 +1,15 @@
 // 1. 引入需要的模組
 const express = require('express');
-const sqlite3 = require('sqlite3').verbose(); // .verbose() 提供更詳細的錯誤訊息
+const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 // 2. 初始化 Express 應用程式
 const app = express();
-const port = process.env.PORT || 3000; // 伺服器運行的端口號
+const port = process.env.PORT || 3000;
 
 // --- 資料庫設定修改 ---
 // 1. 定義持久性磁碟的掛載點 (Render 通常是 /var/data)
-const dataDir = process.env.RENDER_DISK_MOUNT_PATH || path.join(__dirname, 'data'); // 如果在 Render 上，使用其提供的路徑，否則在本地建立 data 資料夾
+const dataDir = process.env.RENDER_DISK_MOUNT_PATH || path.join(__dirname, 'data'); 
 const dbFilename = 'users.db';
 const dbPath = path.join(dataDir, dbFilename);
 
@@ -17,7 +17,7 @@ const dbPath = path.join(dataDir, dbFilename);
 const fs = require('fs');
 if (!fs.existsSync(dataDir)){
     try {
-        fs.mkdirSync(dataDir, { recursive: true }); // recursive: true 允許建立多層目錄
+        fs.mkdirSync(dataDir, { recursive: true });
         console.log(`資料目錄 ${dataDir} 已建立。`);
     } catch (err) {
         console.error(`無法建立資料目錄 ${dataDir}:`, err);
