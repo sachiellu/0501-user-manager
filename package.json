@@ -13,13 +13,13 @@
     "sqlite",
     "side-project"
   ],
-  "author": "", // 你可以填寫你的名字或留空
-  "license": "ISC", // 或者選擇其他開源授權，ISC 是 npm init 的預設之一
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2", // 使用常見的 Express 版本範圍
-    "sqlite3": "^5.1.6"  // 使用常見的 SQLite3 版本範圍
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
   },
   "engines": {
-    "node": ">=18.0.0" // 指定一個適合的 Node.js 版本 (請根據你實際使用的調整)
+    "node": ">=18.0.0"
   }
 }
