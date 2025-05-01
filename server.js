@@ -1,12 +1,8 @@
-// 1. 引入需要的模組
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
-
-// 2. 初始化 Express 應用程式
 const app = express();
 const port = process.env.PORT || 3000;
-
 const dataDir = process.env.RENDER_DISK_MOUNT_PATH || path.join(__dirname, 'data'); 
 const dbFilename = 'users.db';
 const dbPath = path.join(dataDir, dbFilename);
@@ -18,7 +14,6 @@ if (!fs.existsSync(dataDir)){
         console.log(`資料目錄 ${dataDir} 已建立。`);
     } catch (err) {
         console.error(`無法建立資料目錄 ${dataDir}:`, err);
-        // 如果無法建立目錄，可能無法繼續，可以考慮拋出錯誤或退出
         process.exit(1);
     }
 } else {
@@ -81,10 +76,7 @@ app.post('/api/users', (req, res) => {
   });
 });
 
-
-
 app.listen(port, () => {
-
   console.log(`伺服器正在監聽 port ${port}`);
 });
 
